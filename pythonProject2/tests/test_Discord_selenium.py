@@ -26,7 +26,8 @@ class TestDiscord:
             try:
                 assert message_text == last_message, "Отправленное сообщение не найдено"
             except AssertionError as e:
-                allure.attach(driver.get_screenshot_as_png(), name="screenshot", attachment_type=allure.attachment_type.PNG)
+                allure.attach(driver.get_screenshot_as_png(), name="screenshot",
+                              attachment_type=allure.attachment_type.PNG)
                 raise e
 
     @allure.title("Тест проверяет отправку и удаление реакции")
@@ -43,7 +44,6 @@ class TestDiscord:
         with allure.step("Удаление сообщения"):
             discord_page.delete_message_ch3()
 
-
     @allure.title("Тест проверяет редактирование текста сообщения")
     def test_edit_message(self, driver):
         discord_page = DiscordPage(driver)
@@ -59,4 +59,3 @@ class TestDiscord:
             assert edited_message == "Прекрасная сегодня погода! С первым снегом!"
         with allure.step("Удаление сообщения"):
             discord_page.delete_message_ch3()
-
