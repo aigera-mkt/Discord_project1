@@ -83,8 +83,6 @@ class DiscordPage:
     def last_message_locator(self):
         return By.XPATH, "//li[starts-with(@id, 'chat-messages')][last()]"
 
-    # def last_message_locator(self):
-    #     return By.XPATH, "//div[starts-with(@id,'message-content') and contains(@class,'messageContent_f9f2ca')]//span"
 
     def last_message(self):
         # Используем * для распаковки кортежа из last_message_locator
@@ -127,12 +125,7 @@ class DiscordPage:
         delete_button = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, "//div[@id='message-delete' and .='Удалить сообщение']"))
         )
-        # self.driver.find_element(
-        # By.XPATH, "//div[@id='message-delete' and .='Удалить сообщение']"))
-        # action.move_to_element(delete_button).click().perform()
-        # self.hover(delete_button)
         delete_button.click()
-        # time.sleep(1)
         # Подтверждаем удаление
         confirm_button = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, "//button[@type='submit' and .//div[text()='Удалить']]")))
@@ -145,7 +138,6 @@ class DiscordPage:
             EC.presence_of_element_located(
                 (By.XPATH, "//div[@class='hoverBarButton_e986d9 button_f7e168' and @aria-label='Добавить реакцию']"))
         )
-        # reaction = self.driver.find_element(*reaction_element)
         reaction.click()
         thumb_sub = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, "//*[@id='emoji-picker-grid-0-1']/button"))
@@ -180,11 +172,6 @@ class DiscordPage:
         textbox_edit.send_keys(new_text)
         textbox_edit.send_keys(Keys.ENTER)
 
-        # Находим поле ввода и отправляем сообщение с помощью клавиши Enter
-        # edit_input = WebDriverWait(self.driver, 10).until(
-        #     EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'slateTextArea')]"))
-        # )
-        # edit_input.send_keys(Keys.RETURN)
 
     def get_text_last_message(self):
         last_message_element = self.last_message()
