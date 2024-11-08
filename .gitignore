@@ -1,0 +1,7 @@
+# created by virtualenv automatically
+.venv/Lib
+# Исключить файл с ключами и переменными окружения
+.env
+
+# Исключить директорию с отчетами Allure
+allure-results/
