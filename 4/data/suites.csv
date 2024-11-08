@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Nov 08 15:14:53 GMT 2024","Fri Nov 08 15:14:54 GMT 2024","1312","pythonProject2.tests","test_ApiDiscord","","","","test_send_and_delete_message_with_attachment",""
+"passed","Fri Nov 08 15:15:22 GMT 2024","Fri Nov 08 15:15:36 GMT 2024","14468","pythonProject2.tests","test_Discord_selenium","TestDiscord","","","test_edit_message",""
+"passed","Fri Nov 08 15:14:52 GMT 2024","Fri Nov 08 15:14:53 GMT 2024","695","pythonProject2.tests","test_ApiDiscord","","","","test_send_and_delete_message_with_mention",""
+"passed","Fri Nov 08 15:15:11 GMT 2024","Fri Nov 08 15:15:22 GMT 2024","10632","pythonProject2.tests","test_Discord_selenium","TestDiscord","","","test_reaction",""
+"passed","Fri Nov 08 15:15:03 GMT 2024","Fri Nov 08 15:15:11 GMT 2024","7818","pythonProject2.tests","test_Discord_selenium","TestDiscord","","","Тест проверяет отправку сообщения",""
+"passed","Fri Nov 08 15:14:56 GMT 2024","Fri Nov 08 15:14:56 GMT 2024","317","pythonProject2.tests","test_ApiDiscord","","","","test_get_messages",""
+"passed","Fri Nov 08 15:14:54 GMT 2024","Fri Nov 08 15:14:56 GMT 2024","1743","pythonProject2.tests","test_ApiDiscord","","","","test_send_and_delete_message_with_emoji",""
