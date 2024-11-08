@@ -44,7 +44,6 @@ class TestDiscord:
             discord_page.delete_message_ch3()
 
 
-
     @allure.title("Тест проверяет редактирование текста сообщения")
     def test_edit_message(self, driver):
         discord_page = DiscordPage(driver)
